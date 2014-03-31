@@ -1,0 +1,12 @@
+
+
+For Version 2.3.x
+{    
+    Move Jaw-related items out of Pneumatics.java
+    Remove Flipper delay entirely
+}
+
+For any version
+{
+    Make variable and method names more intuitive and distinguished
+}
