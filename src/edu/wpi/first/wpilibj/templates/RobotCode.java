@@ -85,4 +85,10 @@ public class RobotCode extends IterativeRobot
     {
 	LiveWindow.run();
     }
+    
+    public void disabledPeriodic()
+    {
+	super.disabledPeriodic();
+	LED.setDisabled();
+    }
 }
