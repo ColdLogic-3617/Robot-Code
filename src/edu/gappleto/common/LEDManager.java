@@ -45,7 +45,7 @@ public class LEDManager extends CommandBase
     protected void end()
     {
 	LED.setDisabled();
-	System.out.println("End");
+	Log.println("End");
     }
 
     // Called when another command which requires one or more of the same
@@ -53,6 +53,6 @@ public class LEDManager extends CommandBase
     protected void interrupted()
     {
 	LED.setDisabled();
-	System.out.println("Interrupted");
+	Log.println("Interrupted");
     }
 }
