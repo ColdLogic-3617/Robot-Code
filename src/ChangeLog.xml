@@ -1,3 +1,9 @@
+Bruce Version 2.3.2
+{
+    BUG FIXED: fixed LED disable behavior
+    Removed LED timer-disable
+}
+
 Bruce Version 2.3.1
 {
     Flipped color set logic
