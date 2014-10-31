@@ -20,7 +20,7 @@ public class ActiveTimer
 {
     /**
      * This timer should keep the DriveTrain updated, while still delaying other functions.
-     * If DriveTrain delay is needed, use WPI's supplied Timer.Delay().
+     * If DriveTrain delay is needed, use WPI's supplied Timer.delay().
      * @param seconds
      * @since Bruce (2.3.0)
      */
