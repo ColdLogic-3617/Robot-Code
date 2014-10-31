@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.templates.subsystems.DriveTrain;
 import edu.wpi.first.wpilibj.templates.commands.CommandBase;
 
 /**
- * This custom timer will implement the Timer.Delay(), provided by WPI, and at
+ * This custom timer will implement the Timer.delay(), provided by WPI, and at
  * the same time update the DriveTrain controls, while still freezing other
  * subsystems.  This will prevent accidental collisions.
  * @author gappleto97
