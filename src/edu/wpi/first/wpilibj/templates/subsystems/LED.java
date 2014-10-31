@@ -29,10 +29,7 @@ public class LED extends Subsystem
     
     public void setEnabled()
     {
-	if (get.getMatchTime() >= 154.5)
-	    enabler.set(false);
-	else
-	    enabler.set(get.isEnabled());
+	enabler.set(get.isEnabled());
     }
     
     public void setFire(boolean a)
