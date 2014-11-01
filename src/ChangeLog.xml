@@ -12,7 +12,7 @@ Bruce Version 2.3.1
 }
 
 
-Burce Version 2.3.0
+Bruce Version 2.3.0
 {
     Reduced time before jaw opens on auton
     Implemented of the Logger.java tool in all logging commands:
