@@ -77,7 +77,11 @@ public class DriveTrain extends Subsystem
 	RearLeftMotor.set(-speed);
 	RearRightMotor.set(-speed);
     }
-
+    
+     /**
+     * Halts the drivetrain
+     * @since Scarab (1.1.1)
+     */
     public void Stop()
     {
 	Log.println("Stopping all motors.");
@@ -87,6 +91,10 @@ public class DriveTrain extends Subsystem
 	RearRightMotor.set(0);
     }
 
+     /**
+     * Sets all motors to 30% reverse speed
+     * @since Scarab (1.1.1)
+     */
     public void GoBackward()
     {Log.println("Setting engines to -0.3");
 	FrontLeftMotor.set(-.3);
@@ -95,6 +103,10 @@ public class DriveTrain extends Subsystem
 	RearRightMotor.set(-.3);
     }
 
+     /**
+     * Sets all motors to 30% speed
+     * @since Scarab (1.1.1)
+     */
     public void GoForward()
     {
 	Log.println("Setting engines to 0.3");
@@ -104,6 +116,10 @@ public class DriveTrain extends Subsystem
 	RearRightMotor.set(.3);
     }
 
+     /**
+     * Drives based on the Operator Input from the joystick
+     * @since Scarab (1.0.0)
+     */
     public void JoyDrive()
     {
 	Drive.arcadeDrive(oi.getDriveX(), oi.getDriveY());
