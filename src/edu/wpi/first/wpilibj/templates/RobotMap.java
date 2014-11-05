@@ -38,7 +38,7 @@ public class RobotMap
 			    HighJawOn = 5,
 			    HighJawOff = 6;
 
-    //*Pneumatics Section*
+    //*Compressor Section*
     public static final int SwitchPort = 1,
 			    RelayPort = 1;
 
