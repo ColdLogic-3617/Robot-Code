@@ -8,7 +8,7 @@ package edu.gappleto.common;
 import edu.wpi.first.wpilibj.templates.commands.CommandBase;
 
 /**
- *
+ * A subsystem for managing the LED lights via Arduino
  * @author gappleto97
  */
 public class LEDManager extends CommandBase 
