@@ -67,141 +67,282 @@ public class OI
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
+    
+ /**
+ * Returns the value of the Driver's x-axis
+ * @since Scarab (1.0.0)
+ * @author gappleto97
+ */
     public double getDriveX()
     {
 	return DriveStick.getX();
     }
 
+/**
+ * Returns the value of the Driver's y-axis
+ * @since Scarab (1.0.0)
+ * @author gappleto97
+ */
     public double getDriveY()
     {
 	return DriveStick.getY();
     }
 
+/**
+ * Returns the value of the Driver's z-axis
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public double getDriveZ()
     {
 	return DriveStick.getZ();
     }
 
+/**
+ * Returns the value of the Button Monkey's x-axis
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public double getGunX()
     {
 	return GunStick.getX();
     }
 
+/**
+ * Returns the value of the Button Monkey's y-axis
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public double getGunY()
     {
 	return GunStick.getY();
     }
 
+/**
+ * Returns the value of the Button Monkey's z-axis
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public double getGunZ()
     {
 	return GunStick.getZ();
     }
 
+/**
+ * Returns the value of the Button Monkey's button one
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB1()
     {
 	return GB1.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button two
+ * @since Scarab (1.1.7)
+ * @author gappleto97
+ */
     public boolean getGB2()
     {
 	return GB2.get();
     }
-
+    
+/**
+ * Returns the value of the Button Monkey's button three
+ * @since Scarab (1.1.7)
+ * @author gappleto97
+ */
     public boolean getGB3()
     {
 	return GB3.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button four
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB4()
     {
 	return GB4.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button five
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB5()
     {
 	return GB5.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button six
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB6()
     {
 	return GB6.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button seven
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB7()
     {
 	return GB7.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button eight
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB8()
     {
 	return GB8.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button nine
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB9()
     {
 	return GB9.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button ten
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB10()
     {
 	return GB10.get();
     }
 
+/**
+ * Returns the value of the Button Monkey's button eleven
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getGB11()
     {
 	return GB11.get();
     }
 
+/**
+ * Returns the value of the Driver's button one
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB1()
     {
 	return DB1.get();
     }
 
+/**
+ * Returns the value of the Driver's button two
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB2()
     {
 	return DB2.get();
     }
 
+/**
+ * Returns the value of the Driver's button three
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB3()
     {
 	return DB3.get();
     }
 
+/**
+ * Returns the value of the Driver's button four
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB4()
     {
 	return DB4.get();
     }
 
+/**
+ * Returns the value of the Driver's button five
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB5()
     {
 	return DB5.get();
     }
 
+/**
+ * Returns the value of the Driver's button six
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB6()
     {
 	return DB6.get();
     }
 
+/**
+ * Returns the value of the Driver's button seven
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB7()
     {
 	return DB7.get();
     }
 
+/**
+ * Returns the value of the Driver's button eight
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB8()
     {
 	return DB8.get();
     }
 
+/**
+ * Returns the value of the Driver's button nine
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB9()
     {
 	return DB9.get();
     }
 
+/**
+ * Returns the value of the Driver's button ten
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB10()
     {
 	return DB10.get();
     }
 
+/**
+ * Returns the value of the Driver's button eleven
+ * @since Scarab (1.2.0)
+ * @author gappleto97
+ */
     public boolean getDB11()
     {
 	return DB11.get();
