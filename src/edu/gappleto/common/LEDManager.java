@@ -9,7 +9,8 @@ import edu.wpi.first.wpilibj.templates.commands.CommandBase;
 
 /**
  * A subsystem for managing the LED lights via Arduino
- * @author gappleto97
+ * @author ThePenultimateOne
+ * @since Bruce (2.2.2)
  */
 public class LEDManager extends CommandBase 
 {
