@@ -13,8 +13,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.templates.RobotMap;
 
 /**
- *
- * @author gappleto97
+ * A class for interfacing with the Arudino's LED systems
+ * @author ThePenultimateOne
  */
 public class LED extends Subsystem
 {
