@@ -20,7 +20,7 @@ public class Logger
      * any logging message for the robot.
      * *Note: on teleop, the time will start at 15 seconds.  This is not
      * necessarily the actual time.
-     * @param message
+     * @param message	String—the message to be logged
      * @since Bruce (2.2.2)
      */
     public void println(String message)
