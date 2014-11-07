@@ -10,7 +10,8 @@ import edu.wpi.first.wpilibj.DriverStation;
 
 /**
  * This is a custom logging tool, which will include timestamp and voltage.
- * @author gappleto97
+ * @author ThePenultimateOne
+ * @since Bruce (2.2.2)
  */
 public class Logger
 {
@@ -20,7 +21,10 @@ public class Logger
      * any logging message for the robot.
      * *Note: on teleop, the time will start at 15 seconds.  This is not
      * necessarily the actual time.
+     * @author ThePenultimateOne
      * @param message	String—the message to be logged
+     * @see PrintStream
+     * @see DriverStation
      * @since Bruce (2.2.2)
      */
     public void println(String message)
