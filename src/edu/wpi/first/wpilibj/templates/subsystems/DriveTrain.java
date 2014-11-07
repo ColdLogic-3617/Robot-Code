@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.gappleto.common.Logger;
 
 /**
- * @author Gabe Appleton
+ * @author ThePenultimateOne
  */
 public class DriveTrain extends Subsystem
 {
@@ -40,6 +40,11 @@ public class DriveTrain extends Subsystem
 	setDefaultCommand(new Driver());
     }
     
+    /**
+     * Moves the system forward at specified percent of voltage
+     * @author ThePenultimateOne
+     * @param speed	Double—Percentage of desired voltage
+    */
     public void GoForward(double speed)
     {
 	Log.println("Setting engines to " + speed * 100 + "%.");
@@ -49,6 +54,12 @@ public class DriveTrain extends Subsystem
 	RearRightMotor.set(speed);
     }
     
+    /**
+     * Moves the system forward at specified percent of voltage for each side
+     * @author ThePenultimateOne
+     * @param leftspeed	Double—Percentage of desired voltage for left side
+     * @param righspeed	Double—Percentage of desired voltage for right side
+    */
     public void GoForward(double leftspeed, double rightspeed)
     {
 	Log.println("Left engines to " + leftspeed * 100 + "%.");
@@ -59,6 +70,12 @@ public class DriveTrain extends Subsystem
 	RearRightMotor.set(rightspeed);
     }
     
+    /**
+     * Moves the system backward at specified percent of voltage for each side
+     * @author ThePenultimateOne
+     * @param leftspeed	Double—Percentage of desired voltage for left side
+     * @param righspeed	Double—Percentage of desired voltage for right side
+    */
     public void GoBackward(double leftspeed, double rightspeed)
     {
 	Log.println("Left engines to " + -leftspeed * 100 + "%.");
@@ -69,6 +86,11 @@ public class DriveTrain extends Subsystem
 	RearRightMotor.set(-rightspeed);
     }
     
+    /**
+     * Moves the system backward at specified percent of voltage
+     * @author ThePenultimateOne
+     * @param speed	Double—Percentage of desired voltage
+    */
     public void GoBackward(double speed)
     {
 	Log.println("Setting engines to " + -speed);
@@ -80,6 +102,7 @@ public class DriveTrain extends Subsystem
     
      /**
      * Halts the drivetrain
+     * @author ThePenultimateOne
      * @since Scarab (1.1.1)
      */
     public void Stop()
@@ -93,6 +116,7 @@ public class DriveTrain extends Subsystem
 
      /**
      * Sets all motors to 30% reverse speed
+     * @author ThePenultimateOne
      * @since Scarab (1.1.1)
      */
     public void GoBackward()
@@ -105,6 +129,7 @@ public class DriveTrain extends Subsystem
 
      /**
      * Sets all motors to 30% speed
+     * @author ThePenultimateOne
      * @since Scarab (1.1.1)
      */
     public void GoForward()
@@ -118,13 +143,20 @@ public class DriveTrain extends Subsystem
 
      /**
      * Drives based on the Operator Input from the joystick
+     * @author ThePenultimateOne
      * @since Scarab (1.0.0)
      */
     public void JoyDrive()
     {
 	Drive.arcadeDrive(oi.getDriveX(), oi.getDriveY());
     }
-
+    
+    /**
+     * Turns the system 180 degrees in specified amount of time
+     * @author ThePenultimateOne
+     * @param time	int—time desired to turn in
+     * @deprecated
+    */
     public void F180(int time)
     {
 	Log.println("Turning around for " + time + " seconds at 100% speed");
@@ -136,7 +168,13 @@ public class DriveTrain extends Subsystem
 	timer.delay(time/1000);
 	Stop();
     }
-
+	
+    /**
+     * Turns the system 180 degrees at specified gear ratio
+     * @author ThePenultimateOne
+     * @param time	Double—Current gear ratio
+     * @deprecated
+    */
     public void F180(double ratio)
     {
 	Log.println("Turning around for " + RobotMap.Time180 * ratio + 
@@ -150,6 +188,13 @@ public class DriveTrain extends Subsystem
 	Stop();
     }
 
+    /**
+     * Turns the system 180 degrees at specified percent of voltage, in specified ratio
+     * @author ThePenultimateOne
+     * @param ratio	Double—Current gear ratio
+     * @param time	Double—Desired percent of voltage
+     * @deprecated
+    */
     public void F180(double ratio, double speed)
     {
 	Log.println("Turning around for " + RobotMap.Time180 * ratio + 
@@ -163,6 +208,13 @@ public class DriveTrain extends Subsystem
 	Stop();
     }
 
+    /**
+     * Turns the system 180 degrees in specified amount of time
+     * @author ThePenultimateOne
+     * @param direction	int—desired direction to turn
+     * @param ratio	Double—Current gear ratio
+     * @deprecated
+    */
     public void F90(int direction, double ratio)
     {
 	String dir;
@@ -195,42 +247,85 @@ public class DriveTrain extends Subsystem
 	Stop();
     }
 
+
+    /**
+     * Grabs average speed of left motors
+     * @author ThePenultimateOne
+     * @returns	the average volt percentage of the left side motors
+     * @since Scarab (1.1.1)
+    */
     public double getAllLeft()
     {
 	Log.println("Robot has requested average Left speed.");
 	return (getRearLeft() + getFrontLeft()) / 2;
     }
 
+    /**
+     * Grabs average speed of right motors
+     * @author ThePenultimateOne
+     * @returns	the average volt percentage of the right side motors
+     * @since Scarab (1.1.1)
+    */
     public double getAllRight()
     {
 	Log.println("Robot has requested average Right speed.");
 	return (getRearRight() + getFrontRight()) / 2;
     }
 
+    /**
+     * Grabs speed of the rear right motor
+     * @author ThePenultimateOne
+     * @returns	the volt percentage of the rear right motor
+     * @since Scarab (1.1.1)
+    */
     public double getRearRight()
     {
 	Log.println("Robot has requested Rear Right speed.");
 	return RearRightMotor.get();
     }
 
+    /**
+     * Grabs speed of the front right motor
+     * @author ThePenultimateOne
+     * @returns	the volt percentage of the front right motor
+     * @since Scarab (1.1.1)
+    */
     public double getFrontRight()
     {
 	Log.println("Robot has requested Front Right speed.");
 	return FrontRightMotor.get();
     }
 
+    /**
+     * Grabs speed of the rear left motor
+     * @author ThePenultimateOne
+     * @returns	the volt percentage of the rear left motor
+     * @since Scarab (1.1.1)
+    */
     public double getRearLeft()
     {
 	Log.println("Robot has requested Rear Left speed.");
 	return RearLeftMotor.get();
     }
 
+    /**
+     * Grabs speed of the front left motor
+     * @author ThePenultimateOne
+     * @returns	the volt percentage of the front left motor
+     * @since Scarab (1.1.1)
+    */
     public double getFrontLeft()
     {
 	Log.println("Robot has requested Front Left speed.");
 	return FrontLeftMotor.get();
     }
 
+    /**
+     * Grabs speeds of all drivetrain motors, and returns it as an array
+     * @author ThePenultimateOne
+     * @returns	an array of the percent voltages for all motors
+     * @since Scarab (1.1.1)
+    */
     public double[] getState()
     {
 	double[] motorStates = new double[4];
