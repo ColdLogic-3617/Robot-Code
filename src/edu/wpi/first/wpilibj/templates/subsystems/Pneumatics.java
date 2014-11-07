@@ -41,18 +41,33 @@ public class Pneumatics extends Subsystem
     
     Logger Log = new Logger();
 
+    /**
+     * Activates the compressor
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void CompressorInitialize()
     {
 	OurCompressor.start();
 	Log.println("Compressor started.");
     }
 
+    /**
+     * Deactivates the compressor
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void CompressorShutdown()
     {
 	OurCompressor.stop();
 	Log.println("Comressor stopped.");
     }
 
+    /**
+     * Raises the jaw
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void JawUp()
     {
 	if (JawUp.get() == false)
@@ -63,6 +78,11 @@ public class Pneumatics extends Subsystem
 	JawDown.set(false);
     }
 
+    /**
+     * Lowers the jaw
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void JawDown()
     {
 	if (JawUp.get() == true)
@@ -73,6 +93,11 @@ public class Pneumatics extends Subsystem
 	JawDown.set(true);
     }
 
+    /**
+     * Opens the jaw
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void JawOpen()
     {
 	if (JawOpen.get() == false)
@@ -83,6 +108,11 @@ public class Pneumatics extends Subsystem
 	JawClosed.set(false);
     }
 
+    /**
+     * Closes the jaw
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void JawClose()
     {
 	if (JawOpen.get() == true)
@@ -93,6 +123,11 @@ public class Pneumatics extends Subsystem
 	JawClosed.set(true);
     }
 
+    /**
+     * Shifts into high gear
+     * @author ThePenultimateOne
+     * @since Scarab (1.1.2)
+    */
     public void ShiftUp()
     {
 	if (LowShift.get() == false)
@@ -103,6 +138,11 @@ public class Pneumatics extends Subsystem
 	HighShift.set(false);
     }
 
+    /**
+     * Shifts into low gear
+     * @author ThePenultimateOne
+     * @since Scarab (1.1.2)
+    */
     public void ShiftDown()
     {
 	if (LowShift.get() == true)
@@ -113,6 +153,11 @@ public class Pneumatics extends Subsystem
 	HighShift.set(true);
     }
 
+    /**
+     * Sets the pneumatics system into initial configuration
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void InitShift()
     {
 	LowShift.set(true);
@@ -124,6 +169,11 @@ public class Pneumatics extends Subsystem
 	Log.println("Set to starting configuration.");
     }
 
+    /**
+     * Transitions pneumatics system from autonomous to drive function
+     * @author ThePenultimateOne
+     * @since Scarab (1.0.0)
+    */
     public void fromAuton()
     {
 	LowShift.set(false);
@@ -135,24 +185,48 @@ public class Pneumatics extends Subsystem
 	Log.println("Set to driving configuration.");
     }
 
+    /**
+     * Returns the open/close state of the jaw
+     * @author ThePenultimateOne
+     * @return	Boolean—whether the jaw is open
+     * @since Scarab (1.1.1)
+    */
     public boolean getJawState()
     {
 	Log.println("Robot has requested Jaw State.");
 	return JawOpen.get();
     }
 
+    /**
+     * Returns the high/low state of the jaw
+     * @author ThePenultimateOne
+     * @return	Boolean—whether the jaw is raised
+     * @since Scarab (1.1.1)
+    */
     public boolean getJawPosition()
     {
 	Log.println("Robot has requested Jaw Position.");
 	return JawUp.get();
     }
 
+    /**
+     * Returns the gear
+     * @author ThePenultimateOne
+     * @return	Boolean—whether the jaw is in low gear
+     * @since Scarab (1.1.1)
+    */
     public boolean getGear()
     {
 	Log.println("Robot has requested Gear position.");
 	return LowShift.get();
     }
 
+    /**
+     * Returns the gear ratio
+     * @author ThePenultimateOne
+     * @return	Double—the current gear ratio
+     * @since Scarab (1.1.1)
+    */
     public double getRatio()
     {
 	Log.println("Robot has requested Gear Ratio.");
@@ -171,6 +245,12 @@ public class Pneumatics extends Subsystem
 	}
     }
 
+    /**
+     * Returns a ratio of the current pneumatics states
+     * @author ThePenultimateOne
+     * @return	Boolean[]—an array of the current pneumatics states
+     * @since Scarab (1.1.1)
+    */
     public boolean[] getState()
     {
 	boolean[] solenoidState = new boolean[3];
