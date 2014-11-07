@@ -40,7 +40,7 @@ public class LED extends Subsystem
     /**
      * Sets the Arduino's LEDs to indicate that the robot is firing
      * @author ThePenultimateOne
-     * @param a	Booleanâ€”indicator as to whether the robot is firing
+     * @param a	Boolean—indicator as to whether the robot is firing
      * @since Bruce (2.2.2)
      * @deprecated
     */

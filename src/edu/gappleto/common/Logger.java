@@ -22,7 +22,7 @@ public class Logger
      * *Note: on teleop, the time will start at 15 seconds.  This is not
      * necessarily the actual time.
      * @author ThePenultimateOne
-     * @param message	Stringâ€”the message to be logged
+     * @param message	String—the message to be logged
      * @see PrintStream
      * @see DriverStation
      * @since Bruce (2.2.2)

@@ -71,7 +71,7 @@ public class OI
  /**
  * Returns the value of the Driver's x-axis
  * @author ThePenultimateOne
- * @return Doubleâ€”Percent tilted in X-axis
+ * @return Double—Percent tilted in X-axis
  * @since Scarab (1.0.0)
  */
     public double getDriveX()
@@ -82,7 +82,7 @@ public class OI
 /**
  * Returns the value of the Driver's y-axis
  * @author ThePenultimateOne
- * @return Doubleâ€”Percent tilted in Y-axis
+ * @return Double—Percent tilted in Y-axis
  * @since Scarab (1.0.0)
  */
     public double getDriveY()
@@ -93,7 +93,7 @@ public class OI
 /**
  * Returns the value of the Driver's z-axis
  * @author ThePenultimateOne
- * @return Doubleâ€”Percent tilted in Z-axis
+ * @return Double—Percent tilted in Z-axis
  * @since Scarab (1.2.0)
  */
     public double getDriveZ()
@@ -104,7 +104,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's x-axis
  * @author ThePenultimateOne
- * @return Doubleâ€”Percent tilted in X-axis
+ * @return Double—Percent tilted in X-axis
  * @since Scarab (1.2.0)
  */
     public double getGunX()
@@ -115,7 +115,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's y-axis
  * @author ThePenultimateOne
- * @return Doubleâ€”Percent tilted in Y-axis
+ * @return Double—Percent tilted in Y-axis
  * @since Scarab (1.2.0)
  */
     public double getGunY()
@@ -126,7 +126,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's z-axis
  * @author ThePenultimateOne
- * @return Doubleâ€”Percent tilted in Z-axis
+ * @return Double—Percent tilted in Z-axis
  * @since Scarab (1.2.0)
  */
     public double getGunZ()
@@ -137,7 +137,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button one
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.1.7)
  */
     public boolean getGB1()
@@ -148,7 +148,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button two
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.1.7)
  */
     public boolean getGB2()
@@ -159,7 +159,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button three
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.1.7)
  */
     public boolean getGB3()
@@ -170,7 +170,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button four
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB4()
@@ -181,7 +181,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button five
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB5()
@@ -192,7 +192,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button six
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB6()
@@ -203,7 +203,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button seven
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB7()
@@ -214,7 +214,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button eight
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB8()
@@ -225,7 +225,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button nine
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB9()
@@ -236,7 +236,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button ten
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB10()
@@ -247,7 +247,7 @@ public class OI
 /**
  * Returns the value of the Button Monkey's button eleven
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getGB11()
@@ -258,7 +258,7 @@ public class OI
 /**
  * Returns the value of the Driver's button one
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB1()
@@ -269,7 +269,7 @@ public class OI
 /**
  * Returns the value of the Driver's button two
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB2()
@@ -280,7 +280,7 @@ public class OI
 /**
  * Returns the value of the Driver's button three
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB3()
@@ -291,7 +291,7 @@ public class OI
 /**
  * Returns the value of the Driver's button four
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB4()
@@ -302,7 +302,7 @@ public class OI
 /**
  * Returns the value of the Driver's button five
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB5()
@@ -313,7 +313,7 @@ public class OI
 /**
  * Returns the value of the Driver's button six
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB6()
@@ -324,7 +324,7 @@ public class OI
 /**
  * Returns the value of the Driver's button seven
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB7()
@@ -335,7 +335,7 @@ public class OI
 /**
  * Returns the value of the Driver's button eight
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB8()
@@ -346,7 +346,7 @@ public class OI
 /**
  * Returns the value of the Driver's button nine
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB9()
@@ -357,7 +357,7 @@ public class OI
 /**
  * Returns the value of the Driver's button ten
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB10()
@@ -368,7 +368,7 @@ public class OI
 /**
  * Returns the value of the Driver's button eleven
  * @author ThePenultimateOne
- * @return Booleanâ€”The value of the referenced button
+ * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
     public boolean getDB11()

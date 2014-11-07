@@ -35,7 +35,7 @@ public class Launcher extends Subsystem
     /**
      * Sets the Arduino's LEDs to indicate that the robot is enabled
      * @author ThePenultimateOne
-     * @return	Booleanâ€”whether the Launcher is moving or not
+     * @return	Boolean—whether the Launcher is moving or not
      * @since Scarab (1.1.2)
     */
     public boolean getLeftMove()
@@ -51,7 +51,7 @@ public class Launcher extends Subsystem
     /**
      * Sets the Laoder's speed to 100% in specified positive/negative direction
      * @author ThePenultimateOne
-     * @param speed	intâ€”set speed to 100% in specified direction
+     * @param speed	int—set speed to 100% in specified direction
      * @since Scarab (1.1.2)
     */
     public void setSpeed(int speed)
@@ -105,7 +105,7 @@ public class Launcher extends Subsystem
     /**
      * Sets the Launcher's speed to the specified percent of voltage
      * @author ThePenultimateOne
-     * @param speed	doubleâ€”set voltage to specified percent value
+     * @param speed	double—set voltage to specified percent value
      * @since Scarab (1.1.2)
     */
     public void FlipFire(double speed)
@@ -161,7 +161,7 @@ public class Launcher extends Subsystem
     /**
      * Returns voltage of Loader
      * @author ThePenultimateOne
-     * @return	Doubleâ€”percent voltage given to Loader
+     * @return	Double—percent voltage given to Loader
      * @since Scarab (1.1.2)
     */
     public double getTop()
@@ -173,7 +173,7 @@ public class Launcher extends Subsystem
     /**
      * Returns voltage of Launcher
      * @author ThePenultimateOne
-     * @return	Doubleâ€”percent voltage given to Launcher
+     * @return	Double—percent voltage given to Launcher
      * @since Scarab (1.1.2)
     */
     public double getLeft()
@@ -185,7 +185,7 @@ public class Launcher extends Subsystem
     /**
      * Returns voltages of Loader and Launcher
      * @author ThePenultimateOne
-     * @return	Double[]â€”an array of the percent voltages of both Loader and Launcher
+     * @return	Double[]—an array of the percent voltages of both Loader and Launcher
      * @since Scarab (1.1.2)
     */
     public double[] getState()
