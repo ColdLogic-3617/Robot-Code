@@ -27,21 +27,44 @@ public class LED extends Subsystem
     
     static private final DriverStation get = DriverStation.getInstance();
     
+    /**
+     * Sets the Arduino's LEDs to indicate that the robot is enabled
+     * @author ThePenultimateOne
+     * @since Bruce (2.2.2)
+    */
     public void setEnabled()
     {
 	enabler.set(get.isEnabled());
     }
     
+    /**
+     * Sets the Arduino's LEDs to indicate that the robot is firing
+     * @author ThePenultimateOne
+     * @param a	Boolean—indicator as to whether the robot is firing
+     * @since Bruce (2.2.2)
+     * @deprecated
+    */
     public void setFire(boolean a)
     {
 	fire.set(a);
     }
     
+    /**
+     * Sets the Arduino's LEDs to indicate that the robot is in autonomous
+     * @author ThePenultimateOne
+     * @since Bruce (2.2.2)
+     * @deprecated
+    */
     public void setAuto()
     {
 	auto.set(get.isAutonomous());
     }
     
+    /**
+     * Sets the Arduino's LEDs to indicate which alliance the robot is a member of
+     * @author ThePenultimateOne
+     * @since Bruce (2.2.2)
+    */
     public void setTeam()
     {
 	if (get.getAlliance() == Alliance.kBlue)
@@ -54,11 +77,21 @@ public class LED extends Subsystem
 	}
     }
     
+    /**
+     * Sets the Arduino's LEDs to indicate that the robot is disabled
+     * @author ThePenultimateOne
+     * @since Bruce (2.2.2)
+    */
     static public void setDisabled()
     {
 	team.set(false);
     }
 
+    /**
+     * Sets the Arduino's LEDs to indicate whether the robot is enabled
+     * @author ThePenultimateOne
+     * @since Bruce (2.2.2)
+    */
     static public void run()
     {
 	team.set(get.isEnabled());
