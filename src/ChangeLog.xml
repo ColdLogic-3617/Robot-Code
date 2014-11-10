@@ -2,6 +2,15 @@ Bruce Version 2.3.2
 {
     BUG FIXED: fixed LED disable behavior
     Removed LED timer-disable
+    Added tons of javadocs to:
+        DriveTrain.java
+        LED.java
+        Launcher.java
+        Pneumatics.java
+        ActiveTimer.java
+        Logger.java
+        OI.java
+    More to come in following commits
 }
 
 Bruce Version 2.3.1
