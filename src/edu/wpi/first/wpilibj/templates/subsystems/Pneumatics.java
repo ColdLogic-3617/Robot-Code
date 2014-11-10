@@ -15,8 +15,7 @@ import edu.wpi.first.wpilibj.templates.RobotMap;
 import edu.gappleto.common.Logger;
 
 /**
- * @author Justin
- * @author Gabe
+ * @author ThePenultimateOne
  */
 public class Pneumatics extends Subsystem
 {
