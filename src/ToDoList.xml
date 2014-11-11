@@ -1,12 +1,2 @@
-
-
-For Version 2.3.x
-{    
-    Move Jaw-related items out of Pneumatics.java
-    Remove Flipper delay entirely
-}
-
-For any version
-{
-    Make variable and method names more intuitive and distinguished
-}
+Deprecated. See GitHub issue list
+https://github.com/ColdLogic-3617/2014BruceCode/issues
