@@ -23,26 +23,26 @@ public class ActiveTimer
      * This timer should keep the DriveTrain updated, while still delaying other functions.
      * If DriveTrain delay is needed, use WPI's supplied Timer.delay().
      * @author ThePenultimateOne
-     * @param seconds	Double—the amount of time to delay in seconds
+     * @param seconds	Doubleâ€”the amount of time to delay in seconds
      * @since Bruce (2.3.0)
      */
     public static void delay(double seconds)
     {
-	DriveTrain DT = CommandBase.DriveTrain;
-	double sensitivity = 0.02;
-	while (seconds > 0)
-	{
-	    DT.JoyDrive();
-	    if (seconds >= sensitivity)
-	    {
-		Timer.delay(sensitivity);
-		seconds -= sensitivity;
-	    }
-	    else
-	    {
-		Timer.delay(seconds);
-		seconds = 0;
-	    }
-	}
+		DriveTrain DT = CommandBase.DriveTrain;
+		double sensitivity = 0.02;
+		while (seconds > 0)
+		{
+		    DT.JoyDrive();
+		    if (seconds >= sensitivity)
+		    {
+			Timer.delay(sensitivity);
+			seconds -= sensitivity;
+		    }
+		    else
+		    {
+			Timer.delay(seconds);
+			seconds = 0;
+		    }
+		}
     }
 }
