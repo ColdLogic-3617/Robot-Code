@@ -187,7 +187,7 @@ public class Pneumatics extends Subsystem
     /**
      * Returns the open/close state of the jaw
      * @author ThePenultimateOne
-     * @return	Booleanâ€”whether the jaw is open
+     * @return	Boolean—whether the jaw is open
      * @since Scarab (1.1.1)
     */
     public boolean getJawState()
@@ -199,7 +199,7 @@ public class Pneumatics extends Subsystem
     /**
      * Returns the high/low state of the jaw
      * @author ThePenultimateOne
-     * @return	Booleanâ€”whether the jaw is raised
+     * @return	Boolean—whether the jaw is raised
      * @since Scarab (1.1.1)
     */
     public boolean getJawPosition()
@@ -211,7 +211,7 @@ public class Pneumatics extends Subsystem
     /**
      * Returns the gear
      * @author ThePenultimateOne
-     * @return	Booleanâ€”whether the jaw is in low gear
+     * @return	Boolean—whether the jaw is in low gear
      * @since Scarab (1.1.1)
     */
     public boolean getGear()
@@ -223,7 +223,7 @@ public class Pneumatics extends Subsystem
     /**
      * Returns the gear ratio
      * @author ThePenultimateOne
-     * @return	Doubleâ€”the current gear ratio
+     * @return	Double—the current gear ratio
      * @since Scarab (1.1.1)
     */
     public double getRatio()
@@ -247,7 +247,7 @@ public class Pneumatics extends Subsystem
     /**
      * Returns a ratio of the current pneumatics states
      * @author ThePenultimateOne
-     * @return	Boolean[]â€”an array of the current pneumatics states
+     * @return	Boolean[]—an array of the current pneumatics states
      * @since Scarab (1.1.1)
     */
     public boolean[] getState()
