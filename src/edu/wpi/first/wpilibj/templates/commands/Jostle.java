@@ -57,5 +57,6 @@ public class Jostle extends CommandBase
     // subsystems is scheduled to run
     protected void interrupted()
     {
+    	Log.println("Jostle was inturrupted. Investigate.");
     }
 }
