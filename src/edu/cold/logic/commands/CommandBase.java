@@ -2,9 +2,6 @@ package edu.cold.logic.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
-import edu.gappleto.common.Logger;
-
 import edu.cold.logic.OI;
 import edu.cold.logic.subsystems.*;
 
@@ -18,7 +15,6 @@ public abstract class CommandBase extends Command {
 
     public static OI oi;
     // Create a single static instance of all of your subsystems
-    public static Logger log = new Logger();
     public static Compressor compressor = new Compressor();
     public static DriveTrain drive = new DriveTrain();
     public static Launcher flipper = new Launcher();
