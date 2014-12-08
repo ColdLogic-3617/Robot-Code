@@ -62,5 +62,8 @@ public class DriveTrain extends Subsystem
      * @author thayeryates
      * @since Scarab (1.1.1)
      */
-    
+    public void Stop()  {
+        drive.setLeftRightMotorOutputs(0, 0);
+        log.println("Stopped Left and Right Motors");
+    }
 }
