@@ -7,6 +7,7 @@ import edu.gappleto.common.Logger;
 
 import edu.cold.logic.OI;
 import edu.cold.logic.subsystems.*;
+import edu.cold.logic.Var;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -18,7 +19,7 @@ public abstract class CommandBase extends Command {
 
     public static OI oi;
     // Create a single static instance of all of your subsystems
-    public static Logger log = new Logger();
+    public static Logger log = Var.log;
     public static Compressor compressor = new Compressor();
     public static DriveTrain drive = new DriveTrain();
     public static Launcher flipper = new Launcher();

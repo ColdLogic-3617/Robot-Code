@@ -28,15 +28,18 @@ public class DriveTrain extends Subsystem
              rearLeftMotor = new Jaguar(Var.leftMotor2),
              rearRightMotor = new Jaguar(Var.rightMotor2);
     private RobotDrive drive;
+<<<<<<< HEAD
     private DoubleSolenoid shift=new DoubleSolenoid(Var.highShift,Var.lowShift); 
     private Value high = Value.kForward,
                   low = Value.kReverse;
     Logger log = new Logger();
     OI oi=new OI();
+=======
+>>>>>>> origin/New-Build
     
     public DriveTrain() {
         drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
-        log.println("DriveTrain online");
+        Var.log.println("DriveTrain online");
     }
 
     public void initDefaultCommand()    {
@@ -52,7 +55,7 @@ public class DriveTrain extends Subsystem
     */
     public void GoForward (double voltage)  {
         drive.setLeftRightMotorOutputs(voltage, voltage);
-        log.println("Set left & right motor to " + voltage);
+        Var.log.println("Set left & right motor to " + voltage);
     }
     
     /**
@@ -62,7 +65,7 @@ public class DriveTrain extends Subsystem
     */
     public void GoBackward (double voltage)  {
         drive.setLeftRightMotorOutputs(-voltage, -voltage);
-        log.println("Set left & right motor to " + -voltage);
+        Var.log.println("Set left & right motor to " + -voltage);
     }
     
      /**
@@ -72,7 +75,7 @@ public class DriveTrain extends Subsystem
      */
     public void Stop()  {
         drive.setLeftRightMotorOutputs(0, 0);
-        log.println("Stopped Left and Right Motors");
+        Var.log.println("Stopped Left and Right Motors");
     }
     /**
      * Interprets Joystick input for motors
