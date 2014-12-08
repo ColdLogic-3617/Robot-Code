@@ -10,6 +10,10 @@ import edu.cold.logic.Var;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.gappleto.common.Logger;
+import edu.cold.logic.OI;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.cold.logic.commands.Driver;
 
 /**
  *
@@ -24,17 +28,21 @@ public class DriveTrain extends Subsystem
              rearLeftMotor = new Jaguar(Var.leftMotor2),
              rearRightMotor = new Jaguar(Var.rightMotor2);
     private RobotDrive drive;
+    private DoubleSolenoid shift=new DoubleSolenoid(Var.highShift,Var.lowShift); 
+    private Value high = Value.kForward,
+                  low = Value.kReverse;
     Logger log = new Logger();
+    OI oi=new OI();
     
     public DriveTrain() {
         drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
         log.println("DriveTrain online");
     }
 
-    public void initDefaultCommand()
-    {
+    public void initDefaultCommand()    {
         // Set the default command for a subsystem here.
 	//setDefaultCommand(new MySpecialCommand());
+        setDefaultCommand(new Driver());
     }
     
      /**
@@ -66,4 +74,23 @@ public class DriveTrain extends Subsystem
         drive.setLeftRightMotorOutputs(0, 0);
         log.println("Stopped Left and Right Motors");
     }
+    /**
+     * Interprets Joystick input for motors
+     * @author thayeryates
+     * @since Scarab (1.0.0)
+     */
+    public void JoyDrive(){
+        drive.arcadeDrive(oi.getDriveX(),oi.getDriveY());
+    }
+
+    public void ShiftHigh(){
+        shift.set(high);
+        log.println("Shift into high gear");
+        
+    }
+    public void ShiftLow(){
+        shift.set(low);
+        log.println("Shift into low gear");
+    }
+        
 }
