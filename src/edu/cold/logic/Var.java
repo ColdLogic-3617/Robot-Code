@@ -1,5 +1,7 @@
 package edu.cold.logic;
 
+import edu.gappleto.common.Logger;
+
 /**
  * The Var is a mapping from the ports sensors and actuators are wired into
  to a variable name. This provides flexibility changing wiring, makes checking
@@ -16,6 +18,8 @@ public class Var {
     // number and the module. For example you with a rangefinder:
     // public static final int rangefinderPort = 1;
     // public static final int rangefinderModule = 1;
+    
+    public static Logger log = new Logger();
     
     //*LED Section*
     public static final int enabler = 5,
