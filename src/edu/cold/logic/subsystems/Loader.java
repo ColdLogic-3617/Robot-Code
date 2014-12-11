@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  *
- * @author gappleto97
+ * @author alanhinz
  */
 public class Loader extends Subsystem
 {

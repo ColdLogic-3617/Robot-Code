@@ -6,18 +6,18 @@
 package edu.cold.logic.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.Jaguar;
-import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.wpi.first.wpilibj.Jaguar;
+import edu.wpi.first.wpilibj.RobotDrive;
 
-import edu.cold.logic.Var;
-import edu.cold.logic.OI;
 import edu.cold.logic.commands.Driver;
+import edu.cold.logic.OI;
+import edu.cold.logic.Var;
 
 /**
  *
- * @author gappleto97
+ * @author thayeryates
  */
 public class DriveTrain extends Subsystem
 {
@@ -28,7 +28,7 @@ public class DriveTrain extends Subsystem
              rearLeftMotor = new Jaguar(Var.leftMotor2),
              rearRightMotor = new Jaguar(Var.rightMotor2);
     private RobotDrive drive;
-    private DoubleSolenoid shift=new DoubleSolenoid(Var.highShift,Var.lowShift); 
+    private DoubleSolenoid shift = new DoubleSolenoid(Var.highShift,Var.lowShift); 
     private Value high = Value.kForward,
                   low = Value.kReverse;
     OI oi=new OI();
