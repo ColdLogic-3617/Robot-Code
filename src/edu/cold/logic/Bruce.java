@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.cold.logic.commands.CommandBase;
-import edu.cold.logic.commands.ExampleCommand;
+import edu.cold.logic.commands.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -32,7 +32,7 @@ public class Bruce extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-        autonomousCommand = new ExampleCommand();
+        autonomousCommand = new Autonomous();
 
         // Initialize all subsystems
         CommandBase.init();
