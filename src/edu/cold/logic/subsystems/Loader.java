@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.Jaguar;
 import edu.cold.logic.OI;
 /**
  *
- * @author gappleto97
+ * @author alanhinz
  */
 public class Loader extends Subsystem
 {

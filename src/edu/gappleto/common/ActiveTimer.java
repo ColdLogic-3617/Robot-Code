@@ -28,7 +28,7 @@ public class ActiveTimer
      */
     public static void delay(double seconds)
     {
-		DriveTrain DT = CommandBase.DriveTrain; //currently not defined
+		DriveTrain DT = CommandBase.drive;
 		double sensitivity = 0.02;
 		while (seconds > 0)
 		{

@@ -1,13 +1,17 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package edu.cold.logic.commands;
 
 /**
  *
- * @author bradmiller
+ * @author rappleto
  */
-public class ExampleCommand extends CommandBase {
-
-    public ExampleCommand() {
+public class Autonomous extends CommandBase {
+    
+    public Autonomous() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }

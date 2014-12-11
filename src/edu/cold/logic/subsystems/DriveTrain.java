@@ -6,18 +6,18 @@
 package edu.cold.logic.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.cold.logic.Var;
-import edu.wpi.first.wpilibj.Jaguar;
-import edu.wpi.first.wpilibj.RobotDrive;
-import edu.gappleto.common.Logger;
-import edu.cold.logic.OI;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.wpi.first.wpilibj.Jaguar;
+import edu.wpi.first.wpilibj.RobotDrive;
+
 import edu.cold.logic.commands.Driver;
+import edu.cold.logic.OI;
+import edu.cold.logic.Var;
 
 /**
  *
- * @author gappleto97
+ * @author thayeryates
  */
 public class DriveTrain extends Subsystem
 {
@@ -28,14 +28,10 @@ public class DriveTrain extends Subsystem
              rearLeftMotor = new Jaguar(Var.leftMotor2),
              rearRightMotor = new Jaguar(Var.rightMotor2);
     private RobotDrive drive;
-<<<<<<< HEAD
-    private DoubleSolenoid shift=new DoubleSolenoid(Var.highShift,Var.lowShift); 
+    private DoubleSolenoid shift = new DoubleSolenoid(Var.highShift,Var.lowShift); 
     private Value high = Value.kForward,
                   low = Value.kReverse;
-    Logger log = new Logger();
     OI oi=new OI();
-=======
->>>>>>> origin/New-Build
     
     public DriveTrain() {
         drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
@@ -88,12 +84,12 @@ public class DriveTrain extends Subsystem
 
     public void ShiftHigh(){
         shift.set(high);
-        log.println("Shift into high gear");
+        Var.log.println("Shift into high gear");
         
     }
     public void ShiftLow(){
         shift.set(low);
-        log.println("Shift into low gear");
+        Var.log.println("Shift into low gear");
     }
         
 }
