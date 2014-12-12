@@ -3,22 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cold.logic.subsystems;
+package edu.cold.logic.interfaces;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  *
- * @author stsjcarter1
+ * @author Gabe
  */
-public class Compressor extends Subsystem
-{
+public class SensoryInputBeta extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    public void initDefaultCommand()
-    {
+    public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-	//setDefaultCommand(new MySpecialCommand());
+        //setDefaultCommand(new MySpecialCommand());
     }
 }

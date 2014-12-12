@@ -21,9 +21,11 @@ public class Var {
     
     public static Logger log = new Logger();
     
-    //*LED Section*
+    //*Interface Section*
     public static final int enabler = 5,
-			    team = 6;
+			    team = 6,
+                            sonic = 7,
+                            vision = 8;
 
     //*Motor section*
     public static final int leftMotor1 = 1,
