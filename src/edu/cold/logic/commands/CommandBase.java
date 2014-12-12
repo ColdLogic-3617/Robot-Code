@@ -20,7 +20,7 @@ public abstract class CommandBase extends Command {
     public static OI oi;
     // Create a single static instance of all of your subsystems
     public static Logger log = Var.log;
-    public static Compressor compressor = new Compressor();
+    public static Compression compressor = new Compression();
     public static DriveTrain drive = new DriveTrain();
     public static Launcher flipper = new Launcher();
     public static Loader loader = new Loader();

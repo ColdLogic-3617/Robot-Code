@@ -5,35 +5,25 @@
  */
 package edu.cold.logic.commands;
 
-import edu.cold.logic.OI;
-import edu.cold.logic.Var;
-
 /**
  *
- * @author alanhinz
+ * @author Gabe
  */
-public class LoaderCommand extends CommandBase {
+public class Compressing extends CommandBase {
     
-    OI oi = new OI();
-    
-    public LoaderCommand() {
+    public Compressing() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        requires(loader);
+        requires(compressor);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        compressor.Initialize();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        if (oi.getGB2())
-            loader.Dump();
-        else if (oi.getGB3())
-            loader.Load();
-        else
-            loader.Stop();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -42,11 +32,11 @@ public class LoaderCommand extends CommandBase {
     }
 
     // Called once after isFinished returns true
-    protected void end() {}
+    protected void end() {
+    }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        Var.log.println("Loader processing interrupted");
     }
 }

@@ -5,10 +5,12 @@
  */
 package edu.cold.logic.subsystems;
 
+import edu.cold.logic.commands.LoaderCommand;
+import edu.cold.logic.OI;
 import edu.cold.logic.Var;
+
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Jaguar;
-import edu.cold.logic.OI;
 /**
  *
  * @author alanhinz
@@ -17,7 +19,7 @@ public class Loader extends Subsystem
 {
     Jaguar loader = new Jaguar(Var.loader);
     OI oi = new OI();
-    private boolean topMove = false;
+    private boolean moving = false;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
@@ -25,38 +27,56 @@ public class Loader extends Subsystem
     {
         // Set the default command for a subsystem here.
 	//setDefaultCommand(new MySpecialCommand());
-        
+        setDefaultCommand(new LoaderCommand());
     }
     
-    public void setSpeed(int speed)
+    /**
+     * sets speed of loader
+     * @author alanhinz
+     * @param speed     double—desired % of voltage
+     * @since Scarab (1.1.2)
+     */
+    public void setSpeed(double speed)
     {
-	topMove = true;
+	moving = true;
 	if (Math.abs(speed) > 1)
 	    speed = speed / Math.abs(speed);
 	loader.set(speed);
 	Var.log.println("Loader set to " + speed * 100 + "%.");
     }
-     
+     /**
+      * makes loader intake item
+      * @author alanhinz
+      * @since Scarab (1.1.1)
+      */
     public void Load()
     {
-	topMove = true;
+	moving = true;
 	loader.set(-1);
 	Var.log.println("Loader set to -100%.");
     }
-        
+    /**
+     * makes loader dump item
+     * @author alanhinz
+     * @since Scarab (1.1.1)
+     */    
     public void Dump()
     {
-	topMove = true;
+	moving = true;
 	loader.set(1);
 	Var.log.println("Loader set to 100%.");
     }
-     
+    /**
+     * stops loader
+     * @author alanhinz
+     * @since Scarab (1.1.1)
+     */
     public void Stop()
     {
 	loader.set(0);
-	if (topMove == true)
+	if (moving)
 	{
-	    topMove = false;
+	    moving = false;
 	    Var.log.println("Loader stopped.");	    
 	}
     }
