@@ -33,7 +33,7 @@ public class LED extends Subsystem
     */
     public void setEnabled()
     {
-	    enabler.set(station.isEnabled());
+	enabler.set(station.isEnabled());
     }
     
     /**
@@ -53,7 +53,7 @@ public class LED extends Subsystem
     */
     static public void setDisabled()
     {
-	    team.set(false);
+	team.set(false);
     }
 
     /**
