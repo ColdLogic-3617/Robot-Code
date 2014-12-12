@@ -5,25 +5,8 @@
  */
 package edu.cold.logic.interfaces;
 
-import edu.wpi.first.wpilibj.command.Subsystem;
-
-/**
- *
- * @author Gabe
- */
-public class LED extends Subsystem {
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
-
-    public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
-    }
-}
-
+import edu.cold.logic.commands.LEDManager;
 import edu.cold.logic.Var;
-
-import edu.gappleto.common.LEDManager;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DigitalOutput;
@@ -38,8 +21,8 @@ public class LED extends Subsystem
 {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-    static private final DigitalOutput enabler = new DigitalOutput(RobotMap.enabler),
-				                       team = new DigitalOutput(RobotMap.team);
+    static private final DigitalOutput enabler = new DigitalOutput(Var.enabler),
+				                       team = new DigitalOutput(Var.team);
     
     static private final DriverStation get = DriverStation.getInstance();
     
@@ -51,17 +34,6 @@ public class LED extends Subsystem
     public void setEnabled()
     {
 	    enabler.set(get.isEnabled());
-    }
-    
-    /**
-     * Sets the Arduino's LEDs to indicate that the robot is in autonomous
-     * @author ThePenultimateOne
-     * @since Bruce (2.2.2)
-     * @deprecated
-    */
-    public void setAuto()
-    {
-	    auto.set(get.isAutonomous());
     }
     
     /**
