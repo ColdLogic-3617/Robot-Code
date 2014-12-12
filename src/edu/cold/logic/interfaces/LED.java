@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.DriverStation.Alliance;
 
 /**
- * A class for interfacing with the Arudino's LED systems
+ * A class for interfacing with the Arduino's LED systems
  * @author ThePenultimateOne
  */
 public class LED extends Subsystem
@@ -22,9 +22,9 @@ public class LED extends Subsystem
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     static private final DigitalOutput enabler = new DigitalOutput(Var.enabler),
-				                       team = new DigitalOutput(Var.team);
+				       team = new DigitalOutput(Var.team);
     
-    static private final DriverStation get = DriverStation.getInstance();
+    static private final DriverStation station = DriverStation.getInstance();
     
     /**
      * Sets the Arduino's LEDs to indicate that the robot is enabled
@@ -33,7 +33,7 @@ public class LED extends Subsystem
     */
     public void setEnabled()
     {
-	    enabler.set(get.isEnabled());
+	    enabler.set(station.isEnabled());
     }
     
     /**
@@ -43,7 +43,7 @@ public class LED extends Subsystem
     */
     public void setTeam()
     {
-        team.set(get.getAlliance() == Alliance.kRed);
+        team.set(station.getAlliance() == Alliance.kRed);
     }
     
     /**
@@ -63,7 +63,7 @@ public class LED extends Subsystem
     */
     static public void run()
     {
-    	team.set(get.isEnabled());
+    	team.set(station.isEnabled());
     }
     
     public void initDefaultCommand()
