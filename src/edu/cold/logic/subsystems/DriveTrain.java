@@ -47,21 +47,23 @@ public class DriveTrain extends Subsystem
      /**
      * Moves the system forward at specified percent of voltage
      * @author thayeryates
-     * @param voltage	Double—Percentage of desired voltage
+     * @param voltage	Doubleâ€”Percentage of desired voltage
+     * @since Scarab (1.2.0)
     */
     public void GoForward (double voltage)  {
         drive.setLeftRightMotorOutputs(voltage, voltage);
-        Var.log.println("Set left & right motor to " + voltage);
+        Var.log.println("Set DriveTrain to " + voltage + "% voltage");
     }
     
     /**
      * Moves the system backward at specified percent of voltage
      * @author thayeryates
-     * @param voltage	Double—Percentage of desired voltage
+     * @param voltage	Doubleâ€”Percentage of desired voltage
+     * @since Scarab (1.2.0)
     */
     public void GoBackward (double voltage)  {
         drive.setLeftRightMotorOutputs(-voltage, -voltage);
-        Var.log.println("Set left & right motor to " + -voltage);
+        Var.log.println("Set DriveTrain to " + -voltage + "% voltage");
     }
     
      /**
@@ -71,7 +73,7 @@ public class DriveTrain extends Subsystem
      */
     public void Stop()  {
         drive.setLeftRightMotorOutputs(0, 0);
-        Var.log.println("Stopped Left and Right Motors");
+        Var.log.println("Stopped DriveTrain motors");
     }
     /**
      * Interprets Joystick input for motors
@@ -82,14 +84,25 @@ public class DriveTrain extends Subsystem
         drive.arcadeDrive(oi.getDriveX(),oi.getDriveY());
     }
 
+    /**
+     * Shifts into high gear
+     * @author thayeryates
+     * @since Scarab (1.1.2)
+    */
     public void ShiftHigh(){
         shift.set(high);
-        Var.log.println("Shift into high gear");
+        Var.log.println("Shifted into high gear");
         
     }
+
+    /**
+     * Shifts into high gear
+     * @author thayeryates
+     * @since Scarab (1.1.2)
+    */
     public void ShiftLow(){
         shift.set(low);
-        Var.log.println("Shift into low gear");
+        Var.log.println("Shifted into low gear");
     }
         
 }
