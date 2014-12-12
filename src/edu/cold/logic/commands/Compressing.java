@@ -5,6 +5,8 @@
  */
 package edu.cold.logic.commands;
 
+import edu.cold.logic.Var;
+
 /**
  *
  * @author Gabe
@@ -38,5 +40,6 @@ public class Compressing extends CommandBase {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+        Var.log.println ("Comressor has Failed");
     }
 }
