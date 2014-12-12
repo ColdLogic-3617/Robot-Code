@@ -17,16 +17,17 @@ public class LEDManager extends CommandBase {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
         requires(LED);
+        setRunWhenDisabled(true);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	LED.setEnabled();
-    	LED.setTeam();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	LED.setEnabled();
+    	LED.setTeam();
     }
 
     // Make this return true when this Command no longer needs to run execute()
