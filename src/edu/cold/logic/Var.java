@@ -22,10 +22,12 @@ public class Var {
     public static Logger log = new Logger();
     
     //*Autonomous Section*
-    public static final int mode = high,
-    			    high = 1,
-    			    low = 2,
-    			    assist = 3;
+    public static final int high = 1,
+                            low = 2,
+                            assist = 3;
+    
+    //*Autonomous Mode*
+    public static final int mode = high;
     
     //*Interface Section*
     public static final int enabler = 5,
