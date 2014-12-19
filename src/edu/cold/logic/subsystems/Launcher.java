@@ -43,16 +43,6 @@ public class Launcher extends Subsystem
         
     }
     
-    public boolean getLeftMove()
-    {
-	if (LeftLoader.get() != 0)
-	{
-	    return true;
-	}
-	else
-	    return false;
-    }
-    
     /**
      * Sets the Launcher's speed to the specified percent of voltage
      * @author ThePenultimateOne
@@ -120,18 +110,4 @@ public class Launcher extends Subsystem
 	Var.log.println("Robot has requested Launcher speed.");
 	return LeftLoader.getSpeed();
     }
-
-    /**
-     * Returns voltages of Loader and Launcher
-     * @author ThePenultimateOne
-     * @return	Double[]—an array of the percent voltages of both Loader and Launcher
-     * @since Scarab (1.1.2)
-    */
-    public double[] getState()
-    {
-	double[] State = new double[2];
-	State[0] = LeftLoader.getSpeed();
-	return State;
-    }
-
 }
