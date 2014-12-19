@@ -5,28 +5,41 @@
  */
 package edu.cold.logic.commands;
 
+import edu.cold.logic.commands.autonomous.*;
+
 /**
  *
- * @author rappleto
+ * @author ThePenultimateOne
  */
 public class Autonomous extends CommandBase {
     
     public Autonomous() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+        requires(drive);
+        requires(flipper);
+        requires(loader);
+        requires(compressor);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        compressor.Initialize();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        if (Var.mode == Var.high)
+            HighGoal.start();
+        else if (Var.mode == Var.low)
+            LowGoal.start();
+        else
+            Assist.start();
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true
@@ -36,5 +49,6 @@ public class Autonomous extends CommandBase {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+        Var.log.println("Autonomous was interrupted");
     }
 }

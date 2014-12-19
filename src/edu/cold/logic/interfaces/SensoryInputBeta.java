@@ -7,6 +7,8 @@ package edu.cold.logic.interfaces;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+import java.io;
+
 /**
  *
  * @author Gabe
@@ -14,6 +16,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class SensoryInputBeta extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
+
+    InputStream rPi = new InputStream();
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

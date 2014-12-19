@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import edu.gappleto.common.Logger;
 
+import edu.cold.logic.interfaces.*;
 import edu.cold.logic.OI;
 import edu.cold.logic.subsystems.*;
 import edu.cold.logic.Var;
@@ -24,6 +25,7 @@ public abstract class CommandBase extends Command {
     public static DriveTrain drive = new DriveTrain();
     public static Launcher flipper = new Launcher();
     public static Loader loader = new Loader();
+    public static LED LED = new LED();
 
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
@@ -35,6 +37,9 @@ public abstract class CommandBase extends Command {
 
         // Show what command your subsystem is running on the SmartDashboard
         SmartDashboard.putData(compressor);
+        SmartDashboard.putData(drive);
+        SmartDashboard.putData(flipper);
+        SmartDashboard.putData(loader);
     }
 
     public CommandBase(String name) {
