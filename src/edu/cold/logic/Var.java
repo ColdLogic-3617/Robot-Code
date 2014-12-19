@@ -20,6 +20,7 @@ public class Var {
     // public static final int rangefinderModule = 1;
     
     public static Logger log = new Logger();
+    public static boolean cripple = false;
     
     //*Autonomous Section*
     public static final int high = 1,
