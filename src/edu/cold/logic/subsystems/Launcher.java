@@ -71,25 +71,25 @@ public class Launcher extends Subsystem
         FlipStop();
     }
     
-    public void upperJawOpen()
+    public void JawOpen()
     {
        if (upperJaw.get() == closed)
            Log.println("JawOpen");
        upperJaw.set(open);
     }
-    public void upperJawClosed()
+    public void JawClose()
     {
        if (upperJaw.get() == open)
            Log.println("JawOpen");
        upperJaw.set(closed);
     }
-    public void lowerJawRaised()
+    public void JawRaise()
     {
        if (lowerJaw.get() == closed)
            Log.println("JawOpen");
        lowerJaw.set(open);
     }
-    public void lowerJawLowered()
+    public void JawLower()
     {
        if (lowerJaw.get() == open)
            Log.println("JawOpen");
