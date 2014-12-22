@@ -53,7 +53,7 @@ public class LED extends Subsystem
     */
     static public void setDisabled()
     {
-	team.set(false);
+	enabler.set(false);
     }
 
     /**

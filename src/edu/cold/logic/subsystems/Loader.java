@@ -8,6 +8,7 @@ package edu.cold.logic.subsystems;
 import edu.cold.logic.commands.LoaderCommand;
 import edu.cold.logic.OI;
 import edu.cold.logic.Var;
+import edu.gappleto.common.Logger;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Jaguar;
@@ -22,6 +23,10 @@ public class Loader extends Subsystem
     private boolean moving = false;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
+    
+    public Loader() {
+        Logger.printlnBeta("Loader Online");
+    }
 
     public void initDefaultCommand()
     {

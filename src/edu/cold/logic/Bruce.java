@@ -14,6 +14,8 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.cold.logic.commands.CommandBase;
 import edu.cold.logic.commands.*;
+import edu.cold.logic.interfaces.LED;
+import edu.gappleto.common.Logger;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -70,5 +72,11 @@ public class Bruce extends IterativeRobot {
      */
     public void testPeriodic() {
         LiveWindow.run();
+    }
+    
+    public void disabledPeriodic()
+    {
+	super.disabledPeriodic();
+	LED.setDisabled();
     }
 }

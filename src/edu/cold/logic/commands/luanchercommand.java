@@ -25,6 +25,14 @@ public class luanchercommand extends CommandBase {
     protected void execute() {
         if (oi.getGB1())
             flipper.SafeFire();
+        if (oi.getGunY() >= 0.3)
+            flipper.lowerJawRaised();
+        if (oi.getGunY() <= -0.3)
+            flipper.lowerJawLowered();
+        if (oi.getGB6() || oi.getGB11())
+            flipper.upperJawOpen();
+        if (oi.getGB7() || oi.getGB10())
+            flipper.upperJawClosed();
     }
 
     // Make this return true when this Command no longer needs to run execute()
