@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.Jaguar;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  *
@@ -71,6 +72,27 @@ public class Launcher extends Subsystem
         FlipStop();
     }
     
+    public void SafeFireAuton()  {
+        //This is the most important thing
+        Log.println("Luanching the ball");
+        if (upperJaw.get() == closed || lowerJaw.get() == closed)   {
+            Log.println("Saftey check failed");
+            return;
+        }
+        if (Var.cripple)    {
+            Log.println("Robot is crippled");
+            forward=forward/8;
+            backward=backward/8;
+        }
+        FlipFire();
+        Timer.delay(forward);
+        FlipStop();
+        Timer.delay(idle);
+        FlipRetract();
+        Timer.delay(backward);
+        FlipStop();
+    }
+    
     public void JawOpen()
     {
        if (upperJaw.get() == closed)
@@ -99,7 +121,7 @@ public class Launcher extends Subsystem
     /**
      * Sets the Launcher's speed to the specified percent of voltage
      * @author Gabe
-     * @param speed	double—set voltage to specified percent value
+     * @param speed	doubleâ€”set voltage to specified percent value
      * @since Scarab (1.1.2)
     */
     private void FlipFire(double speed)
@@ -155,7 +177,7 @@ public class Launcher extends Subsystem
     /**
      * Returns voltage of Launcher
      * @author Gabe
-     * @return	Double—percent voltage given to Launcher
+     * @return	Doubleâ€”percent voltage given to Launcher
      * @since Scarab (1.1.2)
     */
     public double getFlip()
