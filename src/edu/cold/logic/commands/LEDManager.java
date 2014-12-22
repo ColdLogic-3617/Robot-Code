@@ -5,11 +5,11 @@
  */
 package edu.cold.logic.commands;
 
-import edu.cold.logic.Var;
+import edu.gappleto.common.Log;
 
 /**
  *
- * @author ThePenultimateOne
+ * @author Gabe
  */
 public class LEDManager extends CommandBase {
     
@@ -37,13 +37,13 @@ public class LEDManager extends CommandBase {
     // Called once after isFinished returns true
     protected void end() {
         LED.setDisabled();
-        Var.log.println("LED control ended");
+        Log.println("LED control ended");
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
         LED.setDisabled();
-        Var.log.println("LED interrupted");
+        Log.println("LED interrupted");
     }
 }

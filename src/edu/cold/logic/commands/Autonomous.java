@@ -7,10 +7,11 @@ package edu.cold.logic.commands;
 
 //import edu.cold.logic.commands.autonomous.*;
 import edu.cold.logic.Var;
+import edu.gappleto.common.Log;
 
 /**
  *
- * @author ThePenultimateOne
+ * @author Gabe
  */
 public class Autonomous extends CommandBase {
     
@@ -50,6 +51,6 @@ public class Autonomous extends CommandBase {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        Var.log.println("Autonomous was interrupted");
+        Log.println("Autonomous was interrupted");
     }
 }

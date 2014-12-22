@@ -3,19 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cold.logic.commands;
+package edu.cold.logic.commands.autonomous;
+
+import edu.cold.logic.commands.CommandBase;
 
 import edu.gappleto.common.Log;
 
+import edu.wpi.first.wpilibj.Timer;
+
 /**
  *
- * @author Thayer
+ * @author Gabe
  */
-public class Driver extends CommandBase {
+public class HighGoal extends CommandBase {
     
-    public Driver() {
+    public HighGoal() {
         // Use requires() here to declare subsystem dependencies
-          requires(drive);
+        // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
@@ -24,11 +28,6 @@ public class Driver extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        drive.JoyDrive();
-        if (oi.getDB2())
-            drive.ShiftHigh();
-        if (oi.getDB3())
-            drive.ShiftLow();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -43,6 +42,5 @@ public class Driver extends CommandBase {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        Log.println("Driver was interrupted"); 
     }
 }

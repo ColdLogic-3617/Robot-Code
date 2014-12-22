@@ -5,7 +5,7 @@
  */
 package edu.cold.logic.commands;
 
-import edu.cold.logic.Var;
+import edu.gappleto.common.Log;
 
 /**
  *
@@ -40,6 +40,6 @@ public class Compressing extends CommandBase {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        Var.log.println ("Comressor has Failed");
+        Log.println("Comressor has Failed");
     }
 }

@@ -76,7 +76,7 @@ public class OI
     
  /**
  * Returns the value of the Driver's x-axis
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Double—Percent tilted in X-axis
  * @since Scarab (1.0.0)
  */
@@ -87,7 +87,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's y-axis
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Double—Percent tilted in Y-axis
  * @since Scarab (1.0.0)
  */
@@ -98,7 +98,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's z-axis
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Double—Percent tilted in Z-axis
  * @since Scarab (1.2.0)
  */
@@ -109,7 +109,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's x-axis
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Double—Percent tilted in X-axis
  * @since Scarab (1.2.0)
  */
@@ -120,7 +120,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's y-axis
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Double—Percent tilted in Y-axis
  * @since Scarab (1.2.0)
  */
@@ -131,7 +131,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's z-axis
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Double—Percent tilted in Z-axis
  * @since Scarab (1.2.0)
  */
@@ -142,7 +142,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button one
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.1.7)
  */
@@ -153,7 +153,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button two
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.1.7)
  */
@@ -164,7 +164,7 @@ public class OI
     
 /**
  * Returns the value of the Button Monkey's button three
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.1.7)
  */
@@ -175,7 +175,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button four
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -186,7 +186,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button five
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -197,7 +197,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button six
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -208,7 +208,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button seven
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -219,7 +219,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button eight
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -230,7 +230,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button nine
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -241,7 +241,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button ten
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -252,7 +252,7 @@ public class OI
 
 /**
  * Returns the value of the Button Monkey's button eleven
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -263,7 +263,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button one
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -273,7 +273,7 @@ public class OI
     }
 /**
  * Returns the value of the Driver's button two
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -284,7 +284,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button three
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -295,7 +295,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button four
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -306,7 +306,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button five
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -317,7 +317,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button six
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -328,7 +328,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button seven
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -339,7 +339,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button eight
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -350,7 +350,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button nine
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -361,7 +361,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button ten
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */
@@ -372,7 +372,7 @@ public class OI
 
 /**
  * Returns the value of the Driver's button eleven
- * @author ThePenultimateOne
+ * @author Gabe
  * @return Boolean—The value of the referenced button
  * @since Scarab (1.2.0)
  */

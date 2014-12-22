@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.cold.logic.commands.Driver;
 import edu.cold.logic.OI;
 import edu.cold.logic.Var;
+import edu.gappleto.common.Log;
 
 /**
  *
@@ -35,7 +36,7 @@ public class DriveTrain extends Subsystem
     
     public DriveTrain() {
         drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
-        Var.log.println("DriveTrain online");
+        Log.println("DriveTrain online");
     }
 
     public void initDefaultCommand()    {
@@ -52,7 +53,7 @@ public class DriveTrain extends Subsystem
     */
     public void GoForward (double voltage)  {
         drive.setLeftRightMotorOutputs(voltage, voltage);
-        Var.log.println("Set DriveTrain to " + voltage + "% voltage");
+        Log.println("Set DriveTrain to " + voltage + "% voltage");
     }
     
     /**
@@ -63,7 +64,7 @@ public class DriveTrain extends Subsystem
     */
     public void GoBackward (double voltage)  {
         drive.setLeftRightMotorOutputs(-voltage, -voltage);
-        Var.log.println("Set DriveTrain to " + -voltage + "% voltage");
+        Log.println("Set DriveTrain to " + -voltage + "% voltage");
     }
     
      /**
@@ -73,7 +74,7 @@ public class DriveTrain extends Subsystem
      */
     public void Stop()  {
         drive.setLeftRightMotorOutputs(0, 0);
-        Var.log.println("Stopped DriveTrain motors");
+        Log.println("Stopped DriveTrain motors");
     }
     /**
      * Interprets Joystick input for motors
@@ -91,7 +92,7 @@ public class DriveTrain extends Subsystem
     */
     public void ShiftHigh(){
         shift.set(high);
-        Var.log.println("Shifted into high gear");
+        Log.println("Shifted into high gear");
         
     }
 
@@ -102,7 +103,7 @@ public class DriveTrain extends Subsystem
     */
     public void ShiftLow(){
         shift.set(low);
-        Var.log.println("Shifted into low gear");
+        Log.println("Shifted into low gear");
     }
         
 }

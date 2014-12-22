@@ -14,7 +14,7 @@ import edu.cold.logic.commands.CommandBase;
  * This custom timer will implement the Timer.delay(), provided by WPI, and at
  * the same time update the DriveTrain controls, while still freezing other
  * subsystems.  This will prevent accidental collisions.
- * @author gappleto97
+ * @author Gabe
  * @since Bruce (2.3.0)
  */
 public class ActiveTimer 
@@ -22,7 +22,7 @@ public class ActiveTimer
     /**
      * This timer should keep the DriveTrain updated, while still delaying other functions.
      * If DriveTrain delay is needed, use WPI's supplied Timer.delay().
-     * @author gappleto97
+     * @author Gabe
      * @param seconds	Double—the amount of time to delay in seconds
      * @since Bruce (2.3.0)
      */

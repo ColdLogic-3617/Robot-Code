@@ -5,14 +5,17 @@
  */
 package edu.cold.logic.subsystems;
 
-import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.cold.logic.Var;
-import edu.wpi.first.wpilibj.Jaguar;
+import edu.cold.logic.commands.luanchercommand;
 import edu.cold.logic.OI;
+import edu.cold.logic.Var;
+
+import edu.gappleto.common.ActiveTimer;
+import edu.gappleto.common.Log;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
-import edu.gappleto.common.ActiveTimer;
-import edu.cold.logic.commands.luanchercommand;
+import edu.wpi.first.wpilibj.Jaguar;
 
 /**
  *
@@ -44,18 +47,18 @@ public class Launcher extends Subsystem
     
     public Launcher()
     {
-	Var.log.println("Launcher online.");
+	Log.println("Launcher online.");
     }
     
     public void SafeFire()  {
         //This is the most important thing
-        Var.log.println("Luanching the ball");
+        Log.println("Luanching the ball");
         if (upperJaw.get() == closed || lowerJaw.get() == closed)   {
-            Var.log.println("Saftey check failed");
+            Log.println("Saftey check failed");
             return;
         }
         if (Var.cripple)    {
-            Var.log.println("Robot is crippled");
+            Log.println("Robot is crippled");
             forward=forward/8;
             backward=backward/8;
         }
@@ -71,93 +74,93 @@ public class Launcher extends Subsystem
     public void upperJawOpen()
     {
        if (upperJaw.get() == closed)
-           Var.log.println("JawOpen");
+           Log.println("JawOpen");
        upperJaw.set(open);
     }
     public void upperJawClosed()
     {
        if (upperJaw.get() == open)
-           Var.log.println("JawOpen");
+           Log.println("JawOpen");
        upperJaw.set(closed);
     }
     public void lowerJawRaised()
     {
        if (lowerJaw.get() == closed)
-           Var.log.println("JawOpen");
+           Log.println("JawOpen");
        lowerJaw.set(open);
     }
     public void lowerJawLowered()
     {
        if (lowerJaw.get() == open)
-           Var.log.println("JawOpen");
+           Log.println("JawOpen");
        lowerJaw.set(closed);
     }
     
     /**
      * Sets the Launcher's speed to the specified percent of voltage
-     * @author ThePenultimateOne
+     * @author Gabe
      * @param speed	double—set voltage to specified percent value
      * @since Scarab (1.1.2)
     */
     private void FlipFire(double speed)
     {
         LeftLoader.set(speed);
-	Var.log.println("Flipper fired.");
+	Log.println("Flipper fired.");
     }
     
     /**
      * Sets the Launcher's speed to 100% forward
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Scarab (1.1.2)
     */
     private void FlipFire()
     {
         LeftLoader.set(1);
-	Var.log.println("Flipper fired.");
+	Log.println("Flipper fired.");
     }
     
     /**
      * Sets the Launcher's speed to 10% backward
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Scarab (1.1.2)
     */
     private void FlipRetract()
     {
         LeftLoader.set(-.1);
-	Var.log.println("Flipper retracting.");
+	Log.println("Flipper retracting.");
     }
     
     /**
      * Sets the Launcher's speed to 1% backward
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Scarab (1.1.2)
     */
     private void FlipReserve()
     {
 	LeftLoader.set(-0.01);
-	Var.log.println("Flipper slowly retracting.");
+	Log.println("Flipper slowly retracting.");
     }
     
     /**
      * Halts the Launcher
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Scarab (1.1.2)
     */
     public void FlipStop()
     {
         LeftLoader.set(0);
-	Var.log.println("Flipper stopped.");
+	Log.println("Flipper stopped.");
     }
 
     /**
      * Returns voltage of Launcher
-     * @author ThePenultimateOne
+     * @author Gabe
      * @return	Double—percent voltage given to Launcher
      * @since Scarab (1.1.2)
     */
     public double getFlip()
     {
-	Var.log.println("Robot has requested Launcher speed.");
+	Log.println("Robot has requested Launcher speed.");
 	return LeftLoader.getSpeed();
     }
 }

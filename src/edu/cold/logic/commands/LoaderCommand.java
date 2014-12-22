@@ -7,6 +7,7 @@ package edu.cold.logic.commands;
 
 import edu.cold.logic.OI;
 import edu.cold.logic.Var;
+import edu.gappleto.common.Log;
 
 /**
  *
@@ -47,6 +48,6 @@ public class LoaderCommand extends CommandBase {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        Var.log.println("Loader processing interrupted");
+        Log.println("Loader processing interrupted");
     }
 }

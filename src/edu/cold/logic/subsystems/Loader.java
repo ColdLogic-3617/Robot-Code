@@ -8,7 +8,8 @@ package edu.cold.logic.subsystems;
 import edu.cold.logic.commands.LoaderCommand;
 import edu.cold.logic.OI;
 import edu.cold.logic.Var;
-import edu.gappleto.common.Logger;
+
+import edu.gappleto.common.Log;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Jaguar;
@@ -25,7 +26,7 @@ public class Loader extends Subsystem
     // here. Call these from Commands.
     
     public Loader() {
-        Logger.printlnBeta("Loader Online");
+        Log.println("Loader Online");
     }
 
     public void initDefaultCommand()
@@ -47,7 +48,7 @@ public class Loader extends Subsystem
 	if (Math.abs(speed) > 1)
 	    speed = speed / Math.abs(speed);
 	loader.set(speed);
-	Var.log.println("Loader set to " + speed * 100 + "%.");
+	Log.println("Loader set to " + speed * 100 + "%.");
     }
      /**
       * makes loader intake item
@@ -58,7 +59,7 @@ public class Loader extends Subsystem
     {
 	moving = true;
 	loader.set(-1);
-	Var.log.println("Loader set to -100%.");
+	Log.println("Loader set to -100%.");
     }
     /**
      * makes loader dump item
@@ -69,7 +70,7 @@ public class Loader extends Subsystem
     {
 	moving = true;
 	loader.set(1);
-	Var.log.println("Loader set to 100%.");
+	Log.println("Loader set to 100%.");
     }
     /**
      * stops loader
@@ -82,7 +83,7 @@ public class Loader extends Subsystem
 	if (moving)
 	{
 	    moving = false;
-	    Var.log.println("Loader stopped.");	    
+	    Log.println("Loader stopped.");	    
 	}
     }
 }

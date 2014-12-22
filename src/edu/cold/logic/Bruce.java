@@ -15,7 +15,6 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.cold.logic.commands.CommandBase;
 import edu.cold.logic.commands.*;
 import edu.cold.logic.interfaces.LED;
-import edu.gappleto.common.Logger;
 
 /**
  * The VM is configured to automatically run this class, and to call the

@@ -15,7 +15,7 @@ import edu.wpi.first.wpilibj.DriverStation.Alliance;
 
 /**
  * A class for interfacing with the Arduino's LED systems
- * @author ThePenultimateOne
+ * @author Gabe
  */
 public class LED extends Subsystem
 {
@@ -28,7 +28,7 @@ public class LED extends Subsystem
     
     /**
      * Sets the Arduino's LEDs to indicate that the robot is enabled
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Bruce (2.2.2)
     */
     public void setEnabled()
@@ -38,7 +38,7 @@ public class LED extends Subsystem
     
     /**
      * Sets the Arduino's LEDs to indicate which alliance the robot is a member of
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Bruce (2.2.2)
     */
     public void setTeam()
@@ -48,7 +48,7 @@ public class LED extends Subsystem
     
     /**
      * Sets the Arduino's LEDs to indicate that the robot is disabled
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Bruce (2.2.2)
     */
     static public void setDisabled()
@@ -58,7 +58,7 @@ public class LED extends Subsystem
 
     /**
      * Sets the Arduino's LEDs to indicate whether the robot is enabled
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Bruce (2.2.2)
     */
     static public void run()

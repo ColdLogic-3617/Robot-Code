@@ -8,7 +8,7 @@ package edu.cold.logic.subsystems;
 import edu.cold.logic.Var;
 import edu.cold.logic.commands.Compressing;
 
-import edu.gappleto.common.Logger;
+import edu.gappleto.common.Log;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Compressor;
@@ -24,7 +24,7 @@ public class Compression extends Subsystem
     // here. Call these from Commands.
     
     public Compression()    {
-        Logger.printlnBeta("Compressor Online");
+        Log.println("Compressor Online");
     }
 
     public void initDefaultCommand()
@@ -35,23 +35,23 @@ public class Compression extends Subsystem
     }
      /**
      * Activates the compressor
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Scarab (1.0.0)
     */
     public void Initialize()
     {
 	compressor.start();
-	Var.log.println("Compressor started.");
+        Log.println("Compressor started.");
     }
 
     /**
      * Deactivates the compressor
-     * @author ThePenultimateOne
+     * @author Gabe
      * @since Scarab (1.0.0)
     */
     public void CompressorShutdown()
     {
 	compressor.stop();
-	Var.log.println("Comressor stopped.");
+	Log.println("Comressor stopped.");
     }
 }
