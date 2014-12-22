@@ -32,11 +32,11 @@ public class Autonomous extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         if (Var.mode == Var.high)
-            ;// HighGoal.start();
+            HighGoal.start();
         else if (Var.mode == Var.low)
-            ;//LowGoal.start();
+            LowGoal.start();
         else
-            ;//Assist.start();
+            Assist.start();
     }
 
     // Make this return true when this Command no longer needs to run execute()
