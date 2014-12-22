@@ -38,7 +38,7 @@ public class HighGoal extends CommandBase {
 	Log.println("Opening jaw.");
 	Timer.delay(2);
 	drive.Stop();
-        flipper.SafeFire();
+        flipper.SafeFireAuton();
 	drive.GoBackward(0.5);
 	Log.println("Moving backwards");
 	Timer.delay(2);
