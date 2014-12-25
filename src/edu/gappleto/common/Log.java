@@ -20,7 +20,7 @@ public class Log	{
     private static final DriverStation Station = DriverStation.getInstance();
     private static final DriverStationLCD LCD = DriverStationLCD.getInstance();
     
-    private int currentLine = 1;
+    private static int currentLine = 1;
     
     private static final Line    line1 = DriverStationLCD.Line.kUser1,
 				 line2 = DriverStationLCD.Line.kUser2,
@@ -103,30 +103,23 @@ public class Log	{
      * @since Bruce (2.6.0)
      */
     private static void putToLCD(String message)	{
-    	if (currentLine % 6 == 1)	{
-	    Station.println(Line1, 1, message);
-	}
-	else if (currentLine % 6 == 2)	{
-	    Station.println(Line2, 1, message);
-	}
-	else if (currentLine % 6 == 3)	{
-	    Station.println(Line3, 1, message);
-	}
-	else if (currentLine % 6 == 4)	{
-	    Station.println(Line4, 1, message);
-	}
-	else if (currentLine % 6 == 5)	{
-	    Station.println(Line5, 1, message);
-	}
-	else	{
-	    Station.println(Line6, 1, message);
-	}
+    	if (currentLine % 6 == 1)
+	    LCD.println(line1, 1, message);
+	else if (currentLine % 6 == 2)
+	    LCD.println(line2, 1, message);
+	else if (currentLine % 6 == 3)
+	    LCD.println(line3, 1, message);
+	else if (currentLine % 6 == 4)
+	    LCD.println(line4, 1, message);
+	else if (currentLine % 6 == 5)
+	    LCD.println(line5, 1, message);
+	else
+	    LCD.println(line6, 1, message);
 	currentLine = currentLine + 1;
-	if (currentLine > 6)	{
+        if (currentLine > 5)
 	    currentLine = currentLine % 6;
-	}
 	if (message.length() > 22)
-		putToLCD(message.substring(22));
+            putToLCD(message.substring(22));
 	LCD.updateLCD();
     }
 }

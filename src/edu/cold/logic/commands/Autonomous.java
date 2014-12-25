@@ -5,15 +5,21 @@
  */
 package edu.cold.logic.commands;
 
-//import edu.cold.logic.commands.autonomous.*;
 import edu.cold.logic.Var;
+import edu.cold.logic.commands.autonomous.*;
+
 import edu.gappleto.common.Log;
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  * @author Gabe
  */
 public class Autonomous extends CommandBase {
+    
+    private Command high = new HighGoal(),
+                    low = new LowGoal(),
+                    assist = new Assist();
     
     public Autonomous() {
         // Use requires() here to declare subsystem dependencies
@@ -32,11 +38,11 @@ public class Autonomous extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         if (Var.mode == Var.high)
-            HighGoal.start();
+            high.start();
         else if (Var.mode == Var.low)
-            LowGoal.start();
+            low.start();
         else
-            Assist.start();
+            assist.start();
     }
 
     // Make this return true when this Command no longer needs to run execute()
