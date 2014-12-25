@@ -58,7 +58,7 @@ public class Log	{
      * @param message	String—the message to be logged
      * @see PrintStream
      * @see DriverStation
-     * @since Bruce (2.4.2)
+     * @since Bruce (2.5.0)
      */
     public static void println(String message)	{
 	double v = Station.getBatteryVoltage();
@@ -81,7 +81,7 @@ public class Log	{
      * @see PrintStream
      * @see DriverStation
      * @see DriverStationLCD
-     * @since Bruce (2.4.2)
+     * @since Bruce (2.6.0)
      */
     public static void printlnConsBeta(String message)	{
 	double v = Station.getBatteryVoltage();
