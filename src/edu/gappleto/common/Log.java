@@ -23,7 +23,7 @@ public class Log
      * *Note: on teleop, the time will start at 15 seconds.  This is not
      * necessarily the actual time.
      * @author Gabe
-     * @param message	String—the message to be logged
+     * @param message	Stringâ€”the message to be logged
      * @see PrintStream
      * @see DriverStation
      * @since Bruce (2.2.2)
@@ -44,7 +44,7 @@ public class Log
      * *Note: on teleop, the time will start at 15 seconds.  This is not
      * necessarily the actual time.
      * @author Gabe
-     * @param message	String—the message to be logged
+     * @param message	Stringâ€”the message to be logged
      * @see PrintStream
      * @see DriverStation
      * @since Bruce (2.4.2)
