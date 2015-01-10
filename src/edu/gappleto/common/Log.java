@@ -59,8 +59,9 @@ public class Log	{
      * @see PrintStream
      * @see DriverStation
      * @since Bruce (2.5.0)
+     * @deprecated
      */
-    public static void println(String message)	{
+    public static void printlndep2(String message)	{
 	double v = Station.getBatteryVoltage();
 	double t = Station.getMatchTime();
 	v = (double)(((int)(v * 10000))/10000.0);
@@ -83,7 +84,7 @@ public class Log	{
      * @see DriverStationLCD
      * @since Bruce (2.6.0)
      */
-    public static void printlnConsBeta(String message)	{
+    public static void println(String message)	{
 	double v = Station.getBatteryVoltage();
 	double t = Station.getMatchTime();
 	v = (double)(((int)(v * 10000))/10000.0);
