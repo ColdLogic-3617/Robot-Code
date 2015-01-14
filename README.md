@@ -1,4 +1,4 @@
-2014BruceCode
+Robot Code
 =============
 
-code for the 2014 FRC competition robot, and the arduino lighting unit (coming soon)
+Repo for our robots' code, including an implementation of the [OpenOffload] (https://github.com/ColdLogic-3617/OpenOffload) library.
