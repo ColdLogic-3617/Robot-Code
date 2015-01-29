@@ -29,7 +29,7 @@ public class Var {
     
     //*Interface Section*
     public static final int enabler = 5,
-			    team = 6,
+			    			team = 6,
                             sonic = 7,
                             vision = 8;
 
@@ -39,7 +39,7 @@ public class Var {
 			    leftMotor2 = 3,
 			    rightMotor2 = 4,
 			    launcher = 5,
-			    loader = 7;
+			    loader = 0;
 
     //*Solenoid Section*
     public static final int highShift = 1,
