@@ -34,12 +34,13 @@ public class Var {
                             vision = 8;
 
     //*Motor section*
-    public static final int leftMotor1 = 1,
-			    rightMotor1 = 2,
-			    leftMotor2 = 3,
-			    rightMotor2 = 4,
-			    launcher = 5,
-			    loader = 0;
+    public static final int leftMotor1 = 0, 
+    						rightMotor1 = 1,
+    						leftMotor2 = 2,
+    						rightMotor2 = 3,
+						    rightElevator = 4,
+						    conveyorMotor = 6,
+						    spikeTest = 7;
 
     //*Solenoid Section*
     public static final int highShift = 1,
@@ -52,5 +53,5 @@ public class Var {
     //*Compressor Section*
     public static final int switchPort = 1,
 			    relayPort = 1;
-
+    
 }

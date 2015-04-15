@@ -5,6 +5,7 @@
  */
 package edu.cold.logic.commands;
 
+import edu.cold.logic.OI;
 import edu.cold.logic.Robot;
 import edu.cold.logic.subsystems.DriveTrain;
 import edu.gappleto.common.Log;
@@ -16,7 +17,7 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class Driver extends Command
 {
-	
+	OI oi = new OI();
 	final DriveTrain drive = Robot.drive;
 	
 	public Driver()

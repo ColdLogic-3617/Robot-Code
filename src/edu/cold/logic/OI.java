@@ -26,34 +26,36 @@ public class OI
      * necessarily final terminology, but for the point of this coding, it will
      * work. --Gabe
      * PS, yes I am aware that these names break convention, but unless I am
-     * told otherwise, I will assume that acronyms are exempt.
-     */
-    private final Joystick DriveStick = new Joystick(1); //X & Y is drive control
-    private final Button DB1 = new JoystickButton(DriveStick, 1), //NOT 180 turn
-	    DB2 = new JoystickButton(DriveStick, 2), //Shift up
-	    DB3 = new JoystickButton(DriveStick, 3), //Shift down
-	    DB4 = new JoystickButton(DriveStick, 4), //NOT 90 left
-	    DB5 = new JoystickButton(DriveStick, 5), //NOT 90 right
+     * told otherwise, I will assume that acronyms are exempt.*/
+	
+    private final Joystick DriveStick = new Joystick(0); //X & Y is drive control
+    private final Button DB1 = new JoystickButton(DriveStick, 1),
+	    DB2 = new JoystickButton(DriveStick, 2), 
+	    DB3 = new JoystickButton(DriveStick, 3), 
+	    DB4 = new JoystickButton(DriveStick, 4), 
+	    DB5 = new JoystickButton(DriveStick, 5), 
 	    DB6 = new JoystickButton(DriveStick, 6),
 	    DB7 = new JoystickButton(DriveStick, 7),
 	    DB8 = new JoystickButton(DriveStick, 8),
 	    DB9 = new JoystickButton(DriveStick, 9),
 	    DB10 = new JoystickButton(DriveStick, 10),
-	    DB11 = new JoystickButton(DriveStick, 11);
-
-    private final Joystick GunStick = new Joystick(2);//+ Y lowers Jaw, - Y raises
-    private final Button GB1 = new JoystickButton(GunStick, 1), //Fire
-	    GB2 = new JoystickButton(GunStick, 2), //Dump
-	    GB3 = new JoystickButton(GunStick, 3), //Load
-	    GB4 = new JoystickButton(GunStick, 4),
-	    GB5 = new JoystickButton(GunStick, 5),
-	    GB6 = new JoystickButton(GunStick, 6), //Jaw Up
-	    GB7 = new JoystickButton(GunStick, 7), //Jaw Down
+	    DB11 = new JoystickButton(DriveStick, 11),
+	    DB12 = new JoystickButton(DriveStick, 12);
+    
+    private final Joystick GunStick = new Joystick(1); //conveyer belt
+    private final Button GB1 = new JoystickButton(GunStick, 1), //cycle elevator
+	    GB2 = new JoystickButton(GunStick, 2), 
+	    GB3 = new JoystickButton(GunStick, 3), 
+	    GB4 = new JoystickButton(GunStick, 4), //elevator down
+	    GB5 = new JoystickButton(GunStick, 5), //elevator cancel
+	    GB6 = new JoystickButton(GunStick, 6), //elevator up 
+	    GB7 = new JoystickButton(GunStick, 7), 
 	    GB8 = new JoystickButton(GunStick, 8),
 	    GB9 = new JoystickButton(GunStick, 9),
-	    GB10 = new JoystickButton(GunStick, 10), //Alternate Jaw Up
-	    GB11 = new JoystickButton(GunStick, 11); //Alternate Jaw Down
-
+	    GB10 = new JoystickButton(GunStick, 10), 
+	    GB11 = new JoystickButton(GunStick, 11), //raise ramp
+    	GB12 = new JoystickButton(GunStick, 12); //lower ramp
+    
     // Another type of button you can create is a DigitalIOButton, which is
     // a button or switch hooked up to the cypress module. These are useful if
     // you want to build a customized operator interface.
@@ -74,6 +76,16 @@ public class OI
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
     
+    /**
+     * Returns the value of the Driver's Throttle/Sensitivity
+     * @author Gabe
+     * @return Double—Percent tilted in X-axis
+     * @since Project Echo (3.0.3)
+     */
+    public double getDriveS()	{
+    	return -DriveStick.getThrottle();
+    }
+    
  /**
  * Returns the value of the Driver's x-axis
  * @author Gabe
@@ -81,8 +93,8 @@ public class OI
  * @since Scarab (1.0.0)
  */
     public double getDriveX()
-    {
-	return DriveStick.getX();
+    {    	
+	return DriveStick.getX(); 
     }
 
 /**
@@ -105,6 +117,16 @@ public class OI
     public double getDriveZ()
     {
 	return DriveStick.getZ();
+    }
+    
+    /**
+     * Returns the value of the Button Monkey's Throttle/Sensitivity
+     * @author Gabe
+     * @return Double—Percent tilted in X-axis
+     * @since Project Echo (3.0.3)
+     */
+    public double getGunS()	{
+    	return -GunStick.getThrottle();
     }
 
 /**
@@ -260,6 +282,17 @@ public class OI
     {
 	return GB11.get();
     }
+    
+    /**
+     * Returns the value of the Button Monkey's button twelve
+     * @author Gabe
+     * @return Boolean—The value of the referenced button
+     * @since Scarab (1.2.0)
+     */
+        public boolean getGB12()
+        {
+    	return GB12.get();
+        }
 
 /**
  * Returns the value of the Driver's button one
@@ -380,4 +413,15 @@ public class OI
     {
 	return DB11.get();
     }
+    
+    /**
+     * Returns the value of the Driver's button twelve
+     * @author Gabe
+     * @return Boolean—The value of the referenced button
+     * @since Scarab (1.2.0)
+     */
+        public boolean getDB12()
+        {
+    	return DB12.get();
+        }
 }
